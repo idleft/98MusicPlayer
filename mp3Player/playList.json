@@ -1,0 +1,27 @@
+playList = [
+{title:"【翻唱】silent night",mp3:"http://www.cc98.org/MicFileDown.asp?id=3401"}
+,{title:"【翻唱】Say Something(feat. myself)",mp3:"http://www.cc98.org/MicFileDown.asp?id=3395"}
+,{title:"[翻唱]动力火车 - 那就这样吧",mp3:"http://emhang.8866.org/share/filestores/2013/12/20/9ab7b24bb062765c7d4b38396574398f.mp3"}
+,{title:"【翻唱】《梦一场》~",mp3:"http://emhang.8866.org/share/filestores/2013/06/20/26729a0f2be0a766668c8c857b0e8050.mp3"}
+,{title:"【翻唱】《记得》  这歌真心唱不好啊~~~~~",mp3:"http://www.cc98.org/MicFileDown.asp?id=3109"}
+,{title:"【翻唱】《当爱已成往事》- 张国荣",mp3:"http://www.cc98.org/MicFileDown.asp?id=3392"}
+,{title:"【原创】自不量力",mp3:"http://emhang.8866.org/share/filestores/2013/12/14/bb7e8d0989942bfc55a6e3874233b3aa.mp3"}
+,{title:"【翻唱】宝贝",mp3:"http://emhang.8866.org/share/filestores/2013/11/11/97a7239b4200b6fcada514c4362221e1.mp3"}
+,{title:"【翻唱】I am me once more (Sep 19th,201...",mp3:"http://emhang.8866.org/share/filestores/2013/09/19/5908b82e7e547a16cf76d7c0fd5dfb75.mp3"}
+,{title:"【翻唱】牛奶咖啡-明天，你好",mp3:"http://www.cc98.org/MicFileDown.asp?id=2958"}
+,{title:"翻唱愿得一人心 新人求夸奖 标题长长长~~~~~~~~~~~",mp3:"http://www.cc98.org/MicFileDown.asp?id=3374"}
+,{title:"【翻唱】《趁早》",mp3:"http://www.cc98.org/MicFileDown.asp?id=3319"}
+,{title:"【翻唱】记事本",mp3:"http://emhang.8866.org/share/filestores/2013/12/14/e4f6c32ffcd7b1b0aa1c4ef461c88ee0.mp3"}
+,{title:"【吹奏】 布鲁斯口琴 《突然好想你》",mp3:"http://emhang.8866.org/share/filestores/2013/06/13/da5487973f3460096a4e9beea4ff0222.mp3"}
+,{title:"【原创】豆瓣小站求关注！",mp3:"http://emhang.8866.org/share/filestores/2013/11/15/595cd0cb47749c1bb1c40df7c33086db.mp3"}
+,{title:"【原创】豆瓣小站求关注！",mp3:"http://emhang.8866.org/share/filestores/2013/11/21/e6034995ad0c3525892cec0fca1a17d1.mp3"}
+,{title:"【弹唱】 《寂寞的季节》",mp3:"http://emhang.8866.org/share/filestores/2013/12/08/4ed10a28c37efd46647af8248647b3c4.mp3"}
+,{title:"【翻唱】汪峰-你是我心爱的姑娘",mp3:"http://emhang.8866.org/share/filestores/2013/12/12/fb36665cdc84f0968172f0def1bce5b2.mp3"}
+,{title:"【翻唱】冤气",mp3:"http://www.cc98.org/MicFileDown.asp?id=3394"}
+,{title:"【翻唱】morning",mp3:"http://emhang.8866.org/share/filestores/2013/12/01/e1f61751001618e5078f6abe70d30e6b.mp3"}
+,{title:"【翻唱】倾城",mp3:"http://emhang.8866.org/share/filestores/2013/11/20/c86ab47144404e2df85e8ef9f406bee2.mp3"}
+,{title:"【翻唱】《发现》--- 路绮欧",mp3:"http://www.cc98.org/MicFileDown.asp?id=3142"}
+,{title:"【翻唱】《再回首》——姜育恒",mp3:"http://emhang.8866.org/share/filestores/2013/12/12/92ab1b01edd5509610ce758300c8dd2b.mp3"}
+,{title:"【翻唱】稳稳的幸福-Eason",mp3:"http://www.cc98.org/MicFileDown.asp?id=3396"}
+,{title:"【弹唱】《董小姐》",mp3:"http://emhang.8866.org/share/filestores/2013/12/10/499c266a5a39960d3692cb32bba6188f.mp3"}
+];

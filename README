@@ -1,0 +1,15 @@
+This is a MP3 Crawler for CC98 which is the Student forum in Zhejiang University.
+
+mp3Crawler obtains all mp3 urls and titles
+
+mp3Player is a simple player based on Jplayer
+
+Known Problems:
+	Expolorer other than Chrome cannot auto redirect for urls like MicFileDown...    --- Possible fix method: use urllib to login on cc98, and obtain the final target.
+
+Future Improvements:
+	Fix problems.
+	Change a more editable player.
+	Save play list.
+	Add reply(Thumb up) link.
+	Search auther other musics.
