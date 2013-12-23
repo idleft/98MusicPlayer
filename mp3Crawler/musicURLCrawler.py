@@ -66,7 +66,11 @@ def urlFilter(tpURL,boardID):
 
 def dumpToJson(allMp3List):
 	itemCNT = 0
+<<<<<<< HEAD
 	print 'Total: '+ str(len(allMp3List))
+=======
+	print 'Total: '+ len(allMp3List)
+>>>>>>> 09fd60449e043c1ab7f339a2fc12d33fb7da6b85
 	oFile = open('playList.json','w')
 	oFile.write('playList = [\n')
 	for imp3Info in allMp3List:
