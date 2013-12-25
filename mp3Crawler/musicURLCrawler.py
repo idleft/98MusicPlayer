@@ -23,28 +23,29 @@ def boardCrawler(boardID,urlFilter,pageRange):
 			tpURL = tpItem.get('href')
 			if urlFilter(tpURL,boardID):
 				thrdList.append([tpid,tpURL,tpItem.text])
-		sleep(2)
+		sleep(1)
 	return thrdList
 
 def mp3Crawler(tpList):
 	allMp3List = []
 	#itp = tpList[8]
-	for itp in tpList[8:]:
+	for itp in tpList[3:]:
 		tURL = urlparse.urljoin(siteURL,itp[1])
-		print 'Processing URL: '+ tURL
+		print itp[2].encode('utf8')
+		itp[2] = itp[2].replace('\n','')
 		tpContent = urllib2.urlopen(tURL)
 		bstpContent = BeautifulSoup(tpContent)
-		lzContent = bstpContent.find(id='ubbcode1').text.encode('utf8')
+		lzContent = bstpContent.find(id='ubbcode1').text.encode('utf-8')
 		#print lzContent
 		tMp3URLSet = re.compile('\[mp3\](http://.*?|MicFileDown.*?)\[/mp3\]').findall(lzContent)
 		if len(tMp3URLSet) >0:
 			for imp3URL in tMp3URLSet:
 				if imp3URL.startswith('MicFileDown'):
 					imp3URL = urlparse.urljoin(siteURL,imp3URL)
-
-				print tURL.encode('utf8') +'  '+imp3URL
+				print 'MP3 Found: '+imp3URL
 				allMp3List.append([itp[2],imp3URL])
-		sleep(2)
+		#break
+		sleep(1)
 	return allMp3List
 		#(itp,mp3List,lzContent)
 
@@ -66,30 +67,26 @@ def urlFilter(tpURL,boardID):
 
 def dumpToJson(allMp3List):
 	itemCNT = 0
-<<<<<<< HEAD
 	print 'Total: '+ str(len(allMp3List))
-=======
-	print 'Total: '+ len(allMp3List)
->>>>>>> 09fd60449e043c1ab7f339a2fc12d33fb7da6b85
 	oFile = open('playList.json','w')
 	oFile.write('playList = [\n')
 	for imp3Info in allMp3List:
 		# print imp3Info
 		if itemCNT>0:
 			oFile.write(',')
-		oJItem = '{title:"%s",mp3:"%s"}\n'%(imp3Info[0].replace(u'\n',''),imp3Info[1])
+		oJItem = '{title:"%s",mp3:"%s"}\n'%(imp3Info[0],imp3Info[1])
 		oFile.write(oJItem.encode('utf8'))
 		itemCNT = itemCNT+1
 	oFile.write('];')
 
 def musicCrawler():
 	boardID = '314'
-	topicList = boardCrawler(boardID,urlFilter,pageRange)
-	# pickle.dump(musicList,open('thrdList.p','wb'))
-	# topicList = pickle.load(open('thrdList.p','rb')) # topicList contains [topicid, topicURL, topic title]
+	# topicList = boardCrawler(boardID,urlFilter,pageRange)
+	# pickle.dump(topicList,open('thrdList.p','wb'))
+	topicList = pickle.load(open('thrdList.p','rb')) # topicList contains [topicid, topicURL, topic title]
 	#print len(topicList)
 	allMp3List = mp3Crawler(topicList)
-	#pickle.dump(allMp3List,open('allMp3List.p','wb'))
+	pickle.dump(allMp3List,open('allMp3List.p','wb'))
 	#allMp3List = pickle.load(open('allMp3List.p','rb')) # [musicTitle, musicURL]
 	dumpToJson(allMp3List)
 
@@ -103,4 +100,6 @@ def testURL():
 if __name__=='__main__':
 	#testReg()
 	#testURL()
+	# ss = u'\u3010\u7ffb\u5531\u3011\u300a\u6b64\u95f4\u7684\u5c11\u5e74\u300b\u4e3b\u9898\u66f2\u2014\u8f6c\u8eab\u4e4b\u95f4'
+	# print ss.encode('utf8','ignore')
 	musicCrawler()
